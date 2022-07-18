@@ -7,12 +7,25 @@
 
 }
 
-.task.reminder{
-    border-left: 5px solid yellowgreen;
-}  
-
 .task h3{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+
+.task.reminder.urgent{
+    border-left: 5px solid orangered;
+}
+
+.task.reminder.semi_urgent{
+    border-left: 5px solid orange;
+}
+    
+.task.reminder.standar{
+    border-left: 5px solid yellowgreen;
+}
+
+.task.reminder.expired{
+    border-left: 5px solid #471d1d;
 }

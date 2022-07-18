@@ -1,5 +1,12 @@
+
 <div class="task"
-[ngClass]="{reminder: task.reminder}"
+[ngClass]="{
+    reminder: task.reminder, 
+    urgent: TaskUrgency(task) === taskStates.Urgent,
+    standar: TaskUrgency(task) === taskStates.Standar,
+    expired: TaskUrgency(task) === taskStates.Expired,
+    semi_urgent: TaskUrgency(task) === taskStates.Semi_urgent
+}"
 (click)="onToggle(task)"
 >
     <h3>{{task.text}} 
